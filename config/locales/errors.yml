@@ -1,0 +1,8 @@
+en:
+  error_messages:
+
+    # words
+    word_not_found:
+      code: 20101
+      title: "No results found"
+      detail: "This word does not exist, or is possibly mispelled. Review submission."

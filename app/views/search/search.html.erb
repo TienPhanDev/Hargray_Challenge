@@ -1,18 +1,6 @@
 <div class='titlecontainer'>
  <h1>Presenting Hargray Definition!</h1>
 
-  <h2>Features</h2>
-
- <p>
-   Hargray Definition allows users to:
- </p>
-
- <ul>
-   <li>Type word into search bar & upon clicking search</li>
-   <li>Look up definition of a word & display it to you!</li>
-   <li>View the past 5 search terms</li>
- </ul>
-
  <div class='search-card'>
     <div class="container">
     <div class="row">
@@ -44,16 +32,10 @@
   <div class='definition-card'>
     <h1>Previous searches: </h1>
     <% @saved_words.each do |word| %>
-    <p><%= word %></p>
+    <li><%= word %></li>
     <% end %>
  </div>
 
-    <p>
-        Hargray Communications is a telecommunications provider based out of beautiful Hilton Head Island, South Carolina.    
-    </p>
-    <p>
-    Hargray also supports a variety of technological advancements like high speed internet and media entertainment.
-    </p>
  </div>
 
  
