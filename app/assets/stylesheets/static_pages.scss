@@ -1,0 +1,47 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@font-face {
+    font-family: 'Notable';
+    src: font-url('/assets/Notable-Regular.ttf');
+    font-family: 'Playfair Display';
+    src: font-url('/assets/PlayfairDisplay-Regular.ttf');
+}
+
+body {
+    padding-top: 60px;
+    background-color: cornflowerblue;
+    margin-top: 0;
+    font-family: "Playfair Display";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display';
+  line-height: 1;
+}
+
+.titlecontainer {
+    display: inline-block;
+    justify-content: center;
+}
+
+div.search-card {
+    background-color: rgba(154, 176, 222, 0.9);
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+div.definition-card {
+    background-color: rgba(154, 176, 222, 0.9);
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
