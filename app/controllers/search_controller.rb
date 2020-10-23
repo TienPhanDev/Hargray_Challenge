@@ -1,15 +1,17 @@
 require 'rest-client'
 
 class SearchController < ApplicationController
-  def index
-  end
+  @@saved_words = []
 
   def search
-    word = find_word(params[:word])
-    @definition = word['results'][0]['lexicalEntries'][0]['entries'][0]["senses"][0]['definitions'][0]
     byebug
+    word = find_word(params[:word])
+    @word = word['id']
+    @@saved_words<<@word
+    byebug
+    @saved_words = @@saved_words
+    @definition = word['results'][0]['lexicalEntries'][0]['entries'][0]["senses"][0]['definitions'][0]
     unless @definition
-      byebug
       flash[:alert] = 'Word not found'
       return render action: :index
     end
@@ -18,11 +20,13 @@ class SearchController < ApplicationController
   private
 
   def request_api(url)
+    app_id = ENV['app_id']
+    app_key = ENV['app_key']
     response = RestClient.get(
       url,
       headers = {
-        'app_id' => 'f14d2e47',
-        'app_key' => '236aefef61ef143897ebb48b398cef9c'
+        'app_id' => app_id,
+        'app_key' => app_key
       }
     )
     if response.code == 200

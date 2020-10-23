@@ -1,11 +1,59 @@
-<div class="container">
-  <div class="row mt-5">
-    <div class="col-lg-6">
-      <h4>Result</h4>
-      <dl>
-        <dt>Definition</dt>
-        <dd><%= @definition %></dd>
-      </dl>
+<div class='titlecontainer'>
+ <h1>Presenting Hargray Definition!</h1>
+
+  <h2>Features</h2>
+
+ <p>
+   Hargray Definition allows users to:
+ </p>
+
+ <ul>
+   <li>Type word into search bar & upon clicking search</li>
+   <li>Look up definition of a word & display it to you!</li>
+   <li>View the past 5 search terms</li>
+ </ul>
+
+ <div class='search-card'>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-12 mt-5">
+        <% if flash[:alert] %>
+            <div class="alert alert-warning"><%= flash[:alert] %></div>
+        <% end %>
+        <div class="mx-auto mt-5" style="width: 400px">
+            <%= form_with(url: search_path, method: 'get', local: true) do %>
+            <div class="form-group">
+                <%= label_tag :word, 'Search term '%>
+                <%= text_field_tag :word, nil, placeholder: 'Eg. Perseverance', class: 'form-control' %>
+            </div>
+
+            <%= button_tag 'Search', class: 'btn btn-success btn-block' %>
+            <% end %>
+        </div>
+        </div>
     </div>
-  </div>
-</div>
+    </div>
+ </div>
+ <br/><br/>
+
+ <div class='definition-card'>
+    <h1>Search term: <%= @word %></h1>
+    <h3><%= @definition %></h3>
+ </div>
+
+  <div class='definition-card'>
+    <h1>Previous searches: </h1>
+    <% @saved_words.each do |word| %>
+    <p><%= word %></p>
+    <% end %>
+ </div>
+
+    <p>
+        Hargray Communications is a telecommunications provider based out of beautiful Hilton Head Island, South Carolina.    
+    </p>
+    <p>
+    Hargray also supports a variety of technological advancements like high speed internet and media entertainment.
+    </p>
+ </div>
+
+ 
