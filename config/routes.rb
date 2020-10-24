@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   # landing page will be home AKA root_path
   root to: 'search#index'
   get '/search' => 'search#search'
+
+  match '*unmatched', to: 'application#render_404', via: :all
 end
