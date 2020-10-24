@@ -1,0 +1,32 @@
+<div style="text-align: center; margin-top: 5%;">
+    <div class='search-card' style="text-align: center; margin-bottom: 5px;">
+        <div style="text-align: center; font-size: 22px; margin: 5px;">
+            <% if flash[:alert] %>
+                <div class="alert alert-warning"><%= flash[:alert] %></div>
+            <% end %>
+            <div class="input-group mb-3" style="justify-content: center;" >
+                <%= form_with(url: search_path, method: 'get', local: true) do %>
+                <div class="form-group" style="text-align: center; font-size: 22px;">
+                    <%= label_tag :word, 'Search term' %>
+                    <%= text_field_tag :word, nil, placeholder: 'ex. perseverance', class: 'form-control' %>
+                </div>
+                <%= button_tag 'Search', class: 'btn btn-success btn-block' %>
+                <% end %>
+            </div>
+        </div>
+        <div>
+            <span>Previous search terms</span><br/>
+                <ul class="list-group list-group-flush">
+                    <% @saved_words.each do |word| %>
+                    <li class="list-group-item"><%= word %></li>
+                </ul>
+                <% end %>
+        </div>
+    </div><br/>
+        <div class='definition-card card border border-primary' style="text-align: center; font-size: 22px;">
+            <h5 style='text-decoration: underline;'>Search result</h5>
+            <div class="card-body">
+                <span class="card-text"><span style='font-style: italic;'><%= @word %></span> is defined by Oxford as: "<%= @definition %>"</span>
+            </div>
+        </div>
+</div>

@@ -1,3 +1,31 @@
 // Place all the styles related to the Search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    background-color: cornflowerblue;
+    margin-top: 0;
+    font-family: "Merriweather";
+}
+
+div.search-card {
+    background-color: rgba(154, 176, 222, 0.9);
+    padding: 8px;
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+div.definition-card {
+    background-color: rgba(154, 176, 222, 0.9);
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+div.pastwords-card {
+    background-color: rgba(154, 176, 222, 0.9);
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+}
