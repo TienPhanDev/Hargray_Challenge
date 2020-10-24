@@ -7,6 +7,7 @@ class SearchController < ApplicationController
   end
 
   def search
+    @saved_words = []
     begin
       url = "https://od-api.oxforddictionaries.com/api/v2/entries/en-us/#{params[:word]}"
       response = RestClient.get(
