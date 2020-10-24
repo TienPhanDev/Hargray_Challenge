@@ -1,5 +1,12 @@
 ### Hargray WEB DEVELOPER CODE TEST
 
+Landing page ![Image 1]((1).png) 
+Definition display ![Image 2]((2).png) 
+Previous terms persisted<br/> ![Image 3]((3).png)<br/> 
+Only last 5 terms displayed <br/> ![Image 4]((4).png)<br/> 
+User error/exception <br/> ![Image 5]((5).png) 
+Developer view of error/exception in terminal <br/> ![Image 6]((6).png) 
+
 # Reflection: 
 This was a fun exercise in consuming a 3rd party API. I appreciate the clear guidelines & flexilibity in developer discretion. 
 
@@ -16,4 +23,3 @@ This was a fun exercise in consuming a 3rd party API. I appreciate the clear gui
 # Additional takeaways
 -The hardest part was actually parsing the response object from the Oxford API. I have worked with deep nested data (ex. Fast JSONAPI) so I was able to use tools like Postman & byebug to cleanly parse it. (sidenote: I was blown away by the amount of academic information there was for each word)
 -I used the Ruby array method .last() to handle only displaying last 5 search terms. Refreshing to see again all the dynamic array methods Ruby allows
-
