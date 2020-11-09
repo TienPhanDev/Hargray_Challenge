@@ -1,4 +1,8 @@
 ### Hargray WEB DEVELOPER CODE TEST
+Now that we have had our interview and we did a mini code review and discussion.  Please go back to your project and refactor the code based on our conversation.  Don’t add any new dictionaries but refactor in such a way that you could easily add a new dictionary if required.  The goal of this exercise is to see how you adapt to the feedback from the code review and how that affects your ability to refactor.
+# 
+Assuming each API endpoint returns different JSON, we can create different service objects to parse each differently. Based on the form used, the HTTP verb will trigger a different controller action utilizing different
+service objects
 
 # Reflection: 
 This was a fun exercise in consuming a 3rd party API. I appreciate the clear guidelines & flexilibity in developer discretion. 
